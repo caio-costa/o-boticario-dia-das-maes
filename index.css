@@ -1,0 +1,178 @@
+@font-face {
+  font-family: "Domaine";
+  src: url("https://gist.githack.com/caiosagui/fd840558a5fe1934ae2b0b77c4eb0d84/raw/8f0a317fff9487e31d755c3d42252398c3b69283/domaine-medium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Domaine Black";
+  src: url("https://gist.githack.com/caiosagui/c3e696423865c7b60f734319808001e1/raw/83acb3b2c293fc54de9920bbfe81f9aa36ed54e5/domaine-black.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Domaine Light Italic";
+  src: url("https://gist.githack.com/caiosagui/99f514e8347f666bc62057397c84f03b/raw/f17549fcc822ffbedb86df4f74b4c4fbc6d32e5c/domaine-light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  max-width: 320px;
+  min-height: 480px;
+  max-height: 480px;
+  height: 480px;
+  overflow-y: hidden;
+}
+
+textarea, button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* prevent tap highlight color / shadow */
+  outline-style: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: transparent;
+}
+
+.area {
+  width: 320px;
+  height: 480px;
+}
+
+#step-1 {
+  position: absolute;
+  width: 320px;
+  height: 480px;
+  z-index: 3;
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: opacity .8s, visibility 0s .8s;
+  transition: opacity .8s, visibility 0s .8s;
+  background-image: url("https://gistcdn.githack.com/caiosagui/8d5a4ffe2c500bd5e22c64cabfc649f1/raw/67a03c15aa0ef6439bcaa7a0b3839f50aca5c753/bg-step1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#step-1.clicked {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#step-1 button {
+  position: absolute;
+  width: 169px;
+  height: 38px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 130px;
+  background-image: url(./assets/step-1-btn.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#step-2 {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 480px;
+  -webkit-transition: opacity .8s, visibility 0s .8s;
+  transition: opacity .8s, visibility 0s .8s;
+  background-image: url("https://gistcdn.githack.com/caiosagui/383601589ad659f905603129895f55b8/raw/56bbb81057cbf91dec2927aaeb5cf56cde4c354d/bg-step2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#step-2.clicked {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#step-2 button {
+  position: absolute;
+  width: 169px;
+  height: 38px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 130px;
+  background-image: url(./assets/step-2-btn.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#step-2 textarea {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  text-align: center;
+  font-family: "Domaine Light Italic";
+  font-size: 18px;
+  width: 172px;
+  height: 150px;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -40%);
+          transform: translate(-50%, -40%);
+  color: #6A3329;
+}
+
+#step-2 textarea::-webkit-input-placeholder {
+  color: rgba(106, 51, 41, 0.6) !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  white-space: pre-wrap;
+}
+
+#step-2 textarea:-moz-placeholder {
+  /* Firefox 18- */
+  color: rgba(106, 51, 41, 0.6) !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  white-space: pre-wrap;
+}
+
+#step-2 textarea::-moz-placeholder {
+  /* Firefox 19+ */
+  color: rgba(106, 51, 41, 0.6) !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  white-space: pre-wrap;
+}
+
+#step-2 textarea:-ms-input-placeholder {
+  color: rgba(106, 51, 41, 0.6) !important;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  white-space: pre-wrap;
+}
+
+#step-3 {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  width: 320px;
+  height: 480px;
+  background-image: url("https://gistcdn.githack.com/caiosagui/9b1e50e77a3016b4ec9b9f1943db1023/raw/0e14680bb1ea4baa120c548182c19737f3d7acfa/bg-step3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+canvas {
+  border: 1px black solid;
+}
+
+#canvas, img {
+  display: none;
+}
+/*# sourceMappingURL=index.css.map */

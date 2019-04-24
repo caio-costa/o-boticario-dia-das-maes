@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+        <link rel="stylesheet" type="text/css" href="./index.css">
+        <script src="./index.js"></script>
+    </head>
+    <body>
+        <img id='image'>
+        <canvas id="canvas" width="320" height="480"></canvas>
+        <div id='step-1'>
+            <a class="clickArea">
+                <div class="area"></div>
+            </a>
+            <button id="next"></button>
+        </div>
+        <div id='step-2'>
+            <a class="clickArea">
+                <div class="area"></div>
+            </a>
+            <textarea type="text" id="text" placeholder="DIGITE SUA MENSAGEM AQUI" maxlength="115"></textarea>
+            <a id="download" download="mensagem.jpg">
+                <button id="submit"></button>
+            </a>
+        </div>
+        <div id='step-3'>
+            <a class="clickArea">
+                <div class="area"></div>
+            </a>
+        </div>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136667380-4"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-136667380-4');
+        </script>
+
+        <script>
+            window.onload = function() {
+                var clickTag = '';
+                var clickArea = document.getElementsByClassName("clickArea");
+                for(var i = 0; i < clickArea.length; i++) {
+                    console.log(i);
+                    clickArea[i].addEventListener('click', function(){
+                        window.open(clickTag, "blank");
+                    });
+                }
+            }
+        </script>
+    </body>
+</html>
